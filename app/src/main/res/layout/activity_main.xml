@@ -88,5 +88,17 @@
         android:layout_height="wrap_content"
         android:text="문자 전송" />
 
+    <Button
+        android:id="@+id/naverBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="네이버 사이트 이동" />
+
+    <Button
+        android:id="@+id/kakaoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카카오톡 플레이스토어 이동" />
+
 
 </LinearLayout>

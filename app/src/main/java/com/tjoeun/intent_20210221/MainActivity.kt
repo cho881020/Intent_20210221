@@ -92,6 +92,18 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        naverBtn.setOnClickListener {
+            val myUri = Uri.parse("https://www.naver.com/")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
+
+        kakaoBtn.setOnClickListener {
+            val myUri = Uri.parse("market://details?id=com.kakao.talk")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
