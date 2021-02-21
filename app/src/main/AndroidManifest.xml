@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Intent_20210221">
-        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".EditNicknameActivity"></activity>
+        <activity android:name=".SecondActivity" />
         <activity android:name=".FirstActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
