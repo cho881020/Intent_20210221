@@ -16,6 +16,10 @@ class SecondActivity : AppCompatActivity() {
 //        수신문구 표현 텍스트뷰의 문구로 설정. => 상황마다 코드가 달라짐.
         receivedMessageTxt.text = receivedMessage
 
+//        첨부된 출생년도 받는예시. => Int, Double, Boolean 등 기본형(에 가까운) 변수들은,
+//        첨부가 안됐을때 뭘로 꺼낼지 기본값 지정 필요.
+        val myBirthYear = intent.getIntExtra("출생년도", 0)
+
     }
 }
 

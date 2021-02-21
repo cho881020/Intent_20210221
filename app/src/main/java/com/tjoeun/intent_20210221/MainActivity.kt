@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             myIntent.putExtra("message", inputContent)
 
 //            필요시 여러개 데이터를 첨부 가능. (단순 예시)
-            myIntent.putExtra("출생년도", 1988)
+//            myIntent.putExtra("출생년도", 1988)
 
             startActivity(myIntent)
 
