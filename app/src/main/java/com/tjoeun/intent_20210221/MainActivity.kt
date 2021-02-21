@@ -2,6 +2,7 @@ package com.tjoeun.intent_20210221
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -50,6 +51,19 @@ class MainActivity : AppCompatActivity() {
 //            어떤 데이터를 받으러 가는건지를 숫자로 구별해야함. ex. 닉네임변경 - 1001
             startActivityForResult(myIntent, REQ_FOR_NICKNAME)
 
+
+        }
+
+        dialBtn.setOnClickListener {
+//            입력한 전화번호 저장.
+            val phoneNum = phoneNumEdt.text.toString()
+
+//            폰번(010-1111-2222) => 안드로이드의 연결정보 (Uri)로 변환.
+            val myUri = Uri.parse("tel:${phoneNum}")
+
+//            Intent를 활용해서 => 안드로이드 전화 화면 띄우자.
+            val myIntent = Intent(Intent.ACTION_DIAL, myUri)
+            startActivity(myIntent)
 
         }
 
