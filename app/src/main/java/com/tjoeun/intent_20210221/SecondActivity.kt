@@ -11,6 +11,8 @@ class SecondActivity : AppCompatActivity() {
 
 //        목적지에 도착한 상황. => 첨부한 데이터를 받아주자. (어떤 형태의 자료인가?)
 
+//        String 등 참조형 변수는 기본값 지정 안함.
+//        첨부가 안됐을 때 null 로 자동 저장.
         val receivedMessage = intent.getStringExtra("message")
 
 //        수신문구 표현 텍스트뷰의 문구로 설정. => 상황마다 코드가 달라짐.
