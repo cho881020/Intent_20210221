@@ -1,5 +1,6 @@
 package com.tjoeun.intent_20210221
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -53,4 +54,25 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+//        requestCode 값 확인 => 닉네임을 가지러 갔다온게 맞는가?
+        if (requestCode == REQ_FOR_NICKNAME) {
+
+//            확인 버튼을 누른게 맞는지? 확인.
+            if (resultCode == Activity.RESULT_OK) {
+
+//                새 닉네임을 받아서 => 닉네임 텍스트뷰에 반영.
+                val newNickName = data?.getStringExtra("nick")
+
+                nicknameTxt.text = newNickName
+
+            }
+
+        }
+
+    }
+
 }
