@@ -84,6 +84,10 @@ class MainActivity : AppCompatActivity() {
 
 //            Intent -> Action + URI 전달.
             val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
+
+//            문자 내용 기본값 입력. => 문자화면에 데이터 첨부.
+            myIntent.putExtra("sms_body", "원하는 기본 메세지")
+
             startActivity(myIntent)
 
         }
