@@ -74,6 +74,20 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
+        smsBtn.setOnClickListener {
+
+//            폰번 필요함.
+            val smsNum = phoneNumEdt.text.toString()
+
+//            Uri 필요함.
+            val myUri = Uri.parse("smsto:${smsNum}")
+
+//            Intent -> Action + URI 전달.
+            val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
+            startActivity(myIntent)
+
+        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
