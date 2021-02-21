@@ -25,6 +25,15 @@ class MainActivity : AppCompatActivity() {
             val inputContent = contentEdt.text.toString()
 
 //            두번째 화면 (SecondActivity) 으로 => inputContent의 값을 들고 => 이동
+            val myIntent = Intent(this, SecondActivity::class.java)
+
+//            인텐트의 부가정보로, 들고갈 데이터들을 붙여주자.
+            myIntent.putExtra("message", inputContent)
+
+//            필요시 여러개 데이터를 첨부 가능. (단순 예시)
+            myIntent.putExtra("출생년도", 1988)
+
+            startActivity(myIntent)
 
         }
 
